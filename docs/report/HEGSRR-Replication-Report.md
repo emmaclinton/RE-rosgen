@@ -3,7 +3,6 @@ layout: page
 title: RE- Replication of Rosgen Stream Classification
 ---
 
-
 **Replication of**
 # A classification of natural rivers
 
@@ -13,21 +12,32 @@ Original study *by* Rosgen, D. L.
 and Replication by: Kasprak, A., N. Hough-Snee, T. Beechie, N. Bouwes, G. Brierley, R. Camp, K. Fryirs, H. Imaki, M. Jensen, G. O’Brien, D. Rosgen, and J. Wheaton. 2016. The Blurred Line between Form and Process: A Comparison of Stream Channel Classification Frameworks ed. J. A. Jones. *PLOS ONE* 11 (3):e0150293. https://dx.plos.org/10.1371/journal.pone.0150293.
 
 Replication Authors:
-Your Name, Zach Hilgendorf, Joseph Holler, and Peter Kedron.
+Emma Clinton, Zach Hilgendorf, Joseph Holler, and Peter Kedron.
 
-Replication Materials Available at: [github repository name](github repository link)
+Replication Materials Available at: [RE-rosgen](/RE-rosgen)
 
 Created: `DD Month YYYY`
 Revised: `DD Month YYYY`
 
-## Abstract 
+## Abstract
 
-Briefly describe the original analysis – type of study, research design, analytical approach, and results; motivation of the replication; and outline of the replication study
+There is much appeal in developing and utilizing a standard and quantifiable method of stream classification. Standardizing the way streams are classified allows communication across disciplines regarding river systems and their predicted behaviors, their past behaviors, and the best ways in which to manage or restore them.
 
-## Original Study Information
+The Rosgen Classification System (RCS), probably the most common method for stream classification in North America, is a method of stream taxonomy that involves classifying streams based on physical metrics that are informed by empirical field data (Kasprak et al., 2016). The RCS involves classifying streams based on directly measurable variables, ranging from very broad to very reach-specific characteristics (Rosgen, 1994).
 
-Description: Present a short narrative that summarizes key information about the original study. Include information about all of the following 
-1.	Provide a written description of the study location and extent. Whenever possible, provide specific geographic coordinates bounding the study extent or a spatial reference file. 
+Our replication study focuses on the first two levels of stream classifications: Level I and Level II. Level I is the "broad geomorphic characterization", while Level II is the morphological description of a reach (Rosgen, 1994). Level I is based on longitudinal profile characteristics, cross-section morphology, and plan view morphology (stream pattern). Level II incorporates entrenchment (width of flood-prone area to bankfull surface width of channel), width/depth ratio (bankfull channel width / mean bankfull depth), sinuosity (ratio of stream length to valley length) and channel materials (Rosgen, 1994).
+
+Kasprak et al. (2016) utilized the RCS to classify 33 reach stream types in the John Day River (located in Oregon in the Columbia River Valley). In this study, they used DEM data and expert-generated ground-based assessment data in a GIS to assign a Level I and Level II classification to different reaches in the John Day River.
+
+Our study attempts to replicate the results of Kasprak et al. (2016) using open source GIS and statistical software (GRASS and R, respectively). We use original CHaMP data from the Kasprak study in conjuction with DEM LiDAR data from **(XXXXXXX)** to extrapolate Level I and Level II classifications for a randomly assigned reach in the John Day River.
+
+
+Briefly describe the original analysis – type of study, research design, analytical approach, and results; motivation of the replication; and outline of the replication study; purpose it serves to society (could just be a paragraph)
+
+## Original Study Information (BRIEF outline of what the other papers did)
+
+Description: Present a short narrative that summarizes key information about the original study. Include information about all of the following
+1.	Provide a written description of the study location and extent. Whenever possible, provide specific geographic coordinates bounding the study extent or a spatial reference file.
 2.	Identify and describe the spatial support (spatial resolution, unit of analysis) of the original analysis was conducted
 3.	What type of sample/data did the original study use?
 4.	Are the data and code used in the original analysis available/used in this replication?
@@ -38,25 +48,7 @@ Describe all elements of the analytical plan of the original study that are rele
 
 ### Sampling Plan and Data Description
 
-Include a reference map of the stream reach point you will analyze.
-
-Describe the data used in the original study. If sampling was used, provide details about the sampling design and how it was implemented.
-1. Describe how sampled data relevant to the hypotheses being re-examined was collected by the original authors.
-   -	For human subjects research, include the population from which subjects were sampled, location of sampling, recruitment details, payments for participation, eligibility criteria (e.g. inclusion and exclusion rules), and sampling timeline. 
-   -	For research that did not involve human subjects, include information about sample collection, duration of data gathering efforts, source or location of samples
-   -	For studies in which sample location is obfuscated, explain the motivation for the obfuscation and identify the type of geographic masking technique that was used.  
-2. Describe the spatial sampling design used during data collection
-   -	Identify the design of the spatial sample (e.g., stratified random sample)
-   -	Identify the size of the sample, and how many observations will be collected in different geographic strata or levels if using a stratified, clustered, or multilevel design.
-   -	If a termination rule was used, identify the relevant criteria, original authors’ motivation, and how the rule was implemented. 
-3. Describe any secondary dataset(s), or sub-set(s) of those datasets, used in the original study.
-   -	Explain how the data was acquired by the original authors including – source (with DOI if possible), data of access
-   -	If selected datasets or sub-sets cover only portions of the overall study area or study period, clearly identify which datasets are associated with which locations and times.
-   -	Explain how the data was acquired by the original authors including – source, data of access
-4. Describe if/how the original study excluded or adjusted the initial dataset
-   -	Identify any data that was excluded from the original analysis report –reason for exclusion, exclusion criteria, sample size before and after exclusion, location of excluded data (e.g., is exclusion likely to reduce/eliminate coverage in a particular sub-region)
-   -	Explain how the original authors addressed missing data and details about any interpolation procedures used by the authors.
-   -	Describe any sample weighting that was used in the original study. Separately identify any spatial component used in the weighting scheme.
+Include a reference map of the stream reach point you will analyze (we used a random point from someone else's dataset [Kasprak]).
 
 ### Variables
 
@@ -65,9 +57,9 @@ Describe the variables used in the original study to address the research questi
 1. Identify any experimentally manipulated variables and include details about how these variables were manipulated during the original study.
 2. Identify any measured variables examined in the original study
    -	Identify both the response(s) and predictor variable(s) associated with each hypothesis
-   -	Describe any variable transformations (e.g., log-scaled, categorical) 
+   -	Describe any variable transformations (e.g., log-scaled, categorical)
    -	Describe any spatial aggregation/disaggregation that was applied to any variables
-3. Describe any adjustments made to the variables to account for 
+3. Describe any adjustments made to the variables to account for
    -	first-order spatial effects (sub-regional differences in means)
    -	second-order spatial effects (spatial dependencies)
    -	spatial anisotropies (directional trends)
@@ -84,32 +76,53 @@ Describe the exact analytical specification that was used to test each hypothesi
    - If a classifier was used, provide details about the selection of training data, validation data, and if any independent test data
    - If a spatial multi-level model was used, identify the spatial scale of each level, the variable included at each level, and the levels any spatial structures or cross-scale structure are estimated at.
 Inference Criteria, Results, and Robustness: For each separate hypothesis, provide a description of the results of the original study and the relevant inference criteria and robustness checks
-1. Describe the specific criteria (e.g., p-values, effect size, model fit) and thresholds that were used to make inferences. 
+1. Describe the specific criteria (e.g., p-values, effect size, model fit) and thresholds that were used to make inferences.
    -	Identify any adjustments made for multiple testing (e.g., Bonferroni, Sidak) and how they were implemented.
-2. Describe the result associated with each hypothesis. 
-   -	Identify the size and direction of the effect, measure of variance of the effect, statistical assessments 
-3. Describe any robustness checks that were completed to assess the strength and reliability of inferences for each hypothesis. Identify any spatial components varied during robustness checks. 
+2. Describe the result associated with each hypothesis.
+   -	Identify the size and direction of the effect, measure of variance of the effect, statistical assessments
+3. Describe any robustness checks that were completed to assess the strength and reliability of inferences for each hypothesis. Identify any spatial components varied during robustness checks.
 
-## Materials and Procedure
+## Materials and Procedure (just say if you did anything different; linking to our resources [handouts and models]; if something is documented, refer to that documentation)
 
-Describe how the replication study will be implemented and identify any materials and procedures used to complete the replication. 
-1.	For computational studies include information about the hardware and software environments of both the original study and the replication attempt. 
+In this replication study, the open source software platforms GRASS and R are used to replicate the Rosgen river classification for a specific reach of the John Day River up to Level II. Note that in order to complete this analysis using MacOS, the software platforms [The Unarchiver](https://theunarchiver.com/) and [XCode](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2Fmore%2F&rv=1) are required.
 
-Protocol: Explain how the analysis of the replication will proceed and identify if the analysis plan will match the original study. For many replications this section may be quite short if the procedures used in the original analyses are followed closely. In those cases, this section can simply explain how key elements will be followed. 
+Describe how the replication study will be implemented and identify any materials and procedures used to complete the replication.
+1.	For computational studies include information about the hardware and software environments of both the original study and the replication attempt.
+
+Protocol: Explain how the analysis of the replication will proceed and identify if the analysis plan will match the original study. For many replications this section may be quite short if the procedures used in the original analyses are followed closely. In those cases, this section can simply explain how key elements will be followed.
+
+This replication study is an attempt to use Open Source GIS to replicate the methods of (Rosgen, 1994) and compare our results to those of the Rosgen (1994) replication by Kasprak et al. (2016). In this procedure, each member of the team was assigned a random study site that was used in the original experimental setup. Study sites came from the [CHaMP](/data/raw/public/CHaMP_Data_MFJD.shp) datafile. This instance looks at the site with the loc_id of 7 (CBW05583-275954).
+
+The instructions for the work in GRASS can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf). Finding the centerlines of the river reach and corresponding valley was completed in GRASS. The first step in this process was to define the "reach" area for the point assigned for study and preprocess/create our layers to use in our digitization process. To do this, we used [this model](/procedure/code/visualize.gxm), created by Joe Holler.
+
+We then digitized the banks three separate times, each time in a new vector map, and did the same for the valley edges. In each new layer, the banks or valley edges of the river were digitized as new vector lines at 1:1500 scale. Two of the digitizations for both the banks and the valley layers were done using the slope layer, and the third used a hillshaded DEM as reference.
+
+In order to find the centerlines (and centerline lengths) of the river and the valley, we used [this model](/procedure/code/center_line_length.gxm), also created by Joe Holler.
+
+We then extracted the longitudinal profile of our river reach, extracted them as longitudinal points in a textfile, and extracted the elevation data corresponding to the elevation point coordinates. We then extracted the cross-sectional profile of a transect very near to the CHaMP point we had been assigned, and transformed that transect into a series of points, which we extracted, along with elevation data of the points, as a textfile. (Again, instructions can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf)).
+
+Once we had the outputs for the centerlines of the rivers and valleys, we took the textfile data regarding the cross-sectional profile points and the longitudinal profile points into R. [This script](/procedure/code/2-ProfileViewer.Rmd), created by Zach Hilgendorf, was used to extract a longitudinal profile and cross-sectional profile of the river reach using the data from the textfiles exported from GRASS. The script also calculates and plots the slope of the reach. However, the slope was calculated as an average of slopes between consecutive points along the transect, and due to digitizing errors (e.g. marking the slope as higher up the bank than it should have been) led to some of the slopes being far steeper than others. Therefore, the slope between the first point and the last point in the reach was manually calculated  and compared to the average slope value.
+
+Finally, the R script plotted the cross-sectional profile with flood prone area demarkated by a black line (flood-prone area here defined as twice the bankfull depth).
+
+We then classified our river using the [RCS diagram](https://cfpub.epa.gov/watertrain/moduleFrame.cfm?parent_object_id=1275) provided by the EPA. Level I classification was determined using entrenchment ratio, width/depth ratio, and sinuosity. Level II was determined using calculated slope value and channel material (taken from SubD50 attribute).
+
+Why use GRASS? - GRASS is good at fixing datasets w geometry errors
+
 
 Differences from the Original Study: Identify any ways in which the replication is planned to depart from the original study -- a) location, b) sampling, c) data, d) measures/variable construction, d) analytical techniques.
 1.	Provide the motivation for each change that is made to the original study.
 2.	State how the differences identified above may influence the expected size/direction of the effect of the original study
 3.	List any testable hypotheses associated with each change. If a hypothesis is directional, state the direction
-4.	Outline any initial analyses that were taken to assess whether the differences identified above will influence the outcome of the replication attempt. 
+4.	Outline any initial analyses that were taken to assess whether the differences identified above will influence the outcome of the replication attempt.
 
-Assessment Criteria: Identify the criteria that will define whether the replication attempt was successful (e.g., matched statistical significance, direction of effect, similar magnitude of effect)
+Assessment Criteria: Identify the criteria that will define whether the replication attempt was successful (e.g., matched statistical significance, direction of effect, similar magnitude of effect) (comparing our results to Rosgen/Kasprak)
 - Reproducible documentation of methods, where documentation includes:
 - Annotated flowchart of final parameter values (use last page of RSC_EPA_2005 PDF)
 
-## Replication Results
+## Replication Results (majority of discussion is about how accurate/certain they were compared to Kasprak)
 
-For each hypothesis examined, present separately the results of the replication attempt. 
+For each hypothesis examined, present separately the results of the replication attempt.
 1.	Briefly describe how the replication protocol outlined above was implemented reporting key information (e.g., sample size).
 2.	State whether the original hypothesis was or was not supported by the replication
    - Provide key statistics produced by the replication.
@@ -127,42 +140,52 @@ Figures to Include:
 
 Tables to Include:
 
-Table 1. Site Measurements
+Table 1. Site Measurements (CHaMP_Data_MFJD Site ID from Site_x attribute: CBW05583-275954)
 | Variable | Value | Source |
 | :-: | :-: | :-: |
-| Bankfull Width | | |
-| Bankfull Depth | | |
-| Valley Width | | |
-| Valley Depth | | |
-| Stream/River Length | | |
-| Valley Length | | |
-| Median Channel Material Particle Diameter | | |
+| Bankfull Width | 15.1702 | BFWdth_AVG from CHaMP_Data_MFJD |
+| Bankfull Average Depth | 0.4629 | DpthBf_Avg from CHaMP_Data_MFJD |
+| Valley Width | 70 m | R output from cross-sectional valley profile |
+| Valley Depth | 2.1 m | R output from cross-sectional valley profile |
+| Stream/River Length | 301.5354 m | GRASS layer banksLine |
+| Valley Length | 296.413737 m | GRASS layer valleyLine |
+| Median Channel Material Particle Diameter | 71 mm | SubD50 from CHaMP_Data_MFJD |
 
 Table 2. Rosgen Level I Classification
 | Criteria | Value |
 | :-: | :-: |
-| Entrenchment Ratio | -- |
-| Width / Depth Ratio | -- |
-| Sinuosity | -- |
-| Level I Stream Type | -- |
+| Entrenchment Ratio | 4.6143 |
+| Width / Depth Ratio | (bankfull mean width / bankfull mean depth) 32.7720 |
+| Sinuosity | 1.0173 |
+| Level I Stream Type | C |
+
+slightly entrenched, high w/d, low sinuosity
 
 Table 3. Rosgen Level II Classification
 | Criteria | Value |
 | :-: | :-: |
-| Slope | -- |
-| Channel Material | -- |
-| Level II Stream Type | -- |
+| Slope | 1.714293 OR 0.0066833| (our slope calculations is a meter-by-meter average of slopes' might be a bad way to estimate slope; adds extreme slope values from digitizing errors (could try to calc from elevation at beginning and elevation at the end))
+| Channel Material | (qualitative label based on # above) Cobble |
+| Level II Stream Type | C3 |
 
 
 ## Unplanned Deviations from the Protocol
 
-Identify and describe any unplanned deviations from the original replication protocol the occurred during the course of the replication. Explain the rationale behind any deviations. Finally, provide the details and results of any sensitivity analyses conducted to assess whether these deviations may have impacted the results of the replication.
+The only deviation from the protocol was re-calculating slope as a general value from the start point to the end point of the longitudinal profile. In the original code, the slope value was calculated as the average slope value between each point derived from the reach centerline. Due to digitizing errors, there were some outliers of much higher elevation that were marked higher up the banks than they should have been. This skewed the results of the slope average, resulting in a slope of 1.715. Re-calculating slope as the slope between the beginning and end points accounted for some of the digitizing uncertainty and yielded a much more believable value of 0.0066833.
 
-## Discussion
+## Results/ Discussion
 
 Provide a summary and interpretation of the key findings of the replication *vis-a-vis* the original study results. If the attempt was a failure, discuss possible causes of the failure. These may include:
 - Practical Causes – related to lack of data, code, details in the original analysis
-- Informative Causes – related to absence of effect, change in population, or location. 
+- Informative Causes – related to absence of effect, change in population, or location.
+
+Our results differed from those of Kasprak et al. (2016). The original study found that this river reach (CBW05583-275954) was of the type B3c, while our analysis led to the conclusion that this reach is type C3 (Table 3). Although the Level I classification is not the same, the entrenchment ratio value seems to be the main factor that results in our classification being different from that of the original study (Table 2). There are several factors that may be causing this discrepancy. It is important to consider the fact that we are certainly introducing uncertainty in this digitization process, no matter how carefully we attempted to pick out the banks and valley edges in this data. One factor that caused some inconsistencies in slope and potentially in the centerline calculations was that all digitization was done at 1:1500 scale. At that resolution, it was difficult to very accurately pick out and trace the banks of the river. Perhaps if there were a way to automate this digitization to ensure that it was based on clear, data-driven elevational differences and not approximately visually determined, this would account for some of this uncertainty.
+
+Another potential driver of the difference in our results was the fact that we used different materials and methods than those in the original study. Like Kasprak et al. (2016), we used GIS to test the RCS. However, we used original models and code in the platforms GRASS and R, while they used the [River Bathymetry Toolkit](https://essa.com/explore-essa/tools/river-bathymetry-toolkit-rbt/) to determine the values of river classification criteria. In addition, our data differed from that used in Kasprak et al. (2016). Although both studies used CHaMP  used the [Camp Creek LiDAR DEM data](/data/metadata/Camp_Creek_Lidar_Report_2008.pdf), which had a resolution of 1m x 1m. Conversely, Kasprak et al. (2016) used DEM data with 0.1m grid resolution. This difference in resolution is another potential source of uncertainty in our digitization process and in our slope calculations. We also did not have access to high-resolution topographic data nor to on-the-ground photographs of the site to check the accuracy or validity of our assessment. We also used different methods to pick out our bankfull water surface, relying on the CHaMP data for average bankfull width rather than using the [CHaMP Topo Toolbar](https://sites.google.com/a/northarrowresearch.com/champtools/) to derive a bankfull water surface as Kasprak et al. (2016) did.
+
+Aside from the entrenchment ratio, the sinuosity value is slightly lower than those of both B and C RCS stream types (typically >1.2, whereas our value was 1.0173 [Table 3]). The calculated sinuosity only aligns with that of an RCS Class A stream. This may be due to the approximated centerlines extrapolated from the digitized banks and valley edges losing some of the variability reflected in the banks. Additionally, although there is little temporal separation between our study and Kasprak et al. (2016), it is interesting to give some consideration here the impact of time on changes in fluvial form and behavior.
+
+The width/depth ratio for this side, as well as the slope (as calculated between the highest and lowest points of the reach) and substrate material are very similar for the B3c and and C3 stream types. Our data regarding the width/depth and channel substrate come from the CHaMP data. However, our slope value came from the longitudinal profile created in GRASS and fits well within the confines of the stream classification given by Kasprak et al. (2016). This indicates that there was some similarity between our analysis and that of the original study.
 
 Discuss an interpretation of your results.
 - Were the Level I and Level II results internally and logically consistent? That is, did all the parameters for the identified stream type conform to expectations outlined in Rosgen?
@@ -170,7 +193,7 @@ Discuss an interpretation of your results.
 
 Discuss a response to the following prompt: Quantifying uncertainty in geomorphic systems and in GIScience is of paramount importance, not only for creating error bars on a graph, but for realistically communicating the reliability and legitimacy of an output dataset. Error bars do not (necessarily) reflect on the researcher. They stem from collection constraints, processing constraints, subjective decision making, and many, many more sources. Given what you have learned in this module, discuss at least three sources of error and uncertainty and how they could impact the classification of your stream. Where does uncertainty stem from? Why is uncertainty a problem? What could be done (or has been done) to fix or reduce uncertainty? In a perfect world, how could this uncertainty be removed?
 
-## Conclusion
+## Conclusions
 
 Restate the key findings and discuss their broader societal implications or contributions to theory.
 Do the research findings suggest a need for any future research?
@@ -181,8 +204,8 @@ Include any referenced studies or materials in the [AAG Style of author-date ref
 
 ####  Report Template References & License
 
-This template was developed by Peter Kedron and Joseph Holler with funding support from HEGS-2049837. This template is an adaptation of the ReScience Article Template Developed by N.P Rougier, released under a GPL version 3 license and available here: https://github.com/ReScience/template. Copyright © Nicolas Rougier and coauthors. It also draws inspiration from the pre-registration protocol of the Open Science Framework and the replication studies of Camerer et al. (2016, 2018). See https://osf.io/pfdyw/ and https://osf.io/bzm54/ 
+This template was developed by Peter Kedron and Joseph Holler with funding support from HEGS-2049837. This template is an adaptation of the ReScience Article Template Developed by N.P Rougier, released under a GPL version 3 license and available here: https://github.com/ReScience/template. Copyright © Nicolas Rougier and coauthors. It also draws inspiration from the pre-registration protocol of the Open Science Framework and the replication studies of Camerer et al. (2016, 2018). See https://osf.io/pfdyw/ and https://osf.io/bzm54/
 
-Camerer, C. F., A. Dreber, E. Forsell, T.-H. Ho, J. Huber, M. Johannesson, M. Kirchler, J. Almenberg, A. Altmejd, T. Chan, E. Heikensten, F. Holzmeister, T. Imai, S. Isaksson, G. Nave, T. Pfeiffer, M. Razen, and H. Wu. 2016. Evaluating replicability of laboratory experiments in economics. Science 351 (6280):1433–1436. https://www.sciencemag.org/lookup/doi/10.1126/science.aaf0918. 
+Camerer, C. F., A. Dreber, E. Forsell, T.-H. Ho, J. Huber, M. Johannesson, M. Kirchler, J. Almenberg, A. Altmejd, T. Chan, E. Heikensten, F. Holzmeister, T. Imai, S. Isaksson, G. Nave, T. Pfeiffer, M. Razen, and H. Wu. 2016. Evaluating replicability of laboratory experiments in economics. Science 351 (6280):1433–1436. https://www.sciencemag.org/lookup/doi/10.1126/science.aaf0918.
 
 Camerer, C. F., A. Dreber, F. Holzmeister, T.-H. Ho, J. Huber, M. Johannesson, M. Kirchler, G. Nave, B. A. Nosek, T. Pfeiffer, A. Altmejd, N. Buttrick, T. Chan, Y. Chen, E. Forsell, A. Gampa, E. Heikensten, L. Hummer, T. Imai, S. Isaksson, D. Manfredi, J. Rose, E.-J. Wagenmakers, and H. Wu. 2018. Evaluating the replicability of social science experiments in Nature and Science between 2010 and 2015. Nature Human Behaviour 2 (9):637–644. http://www.nature.com/articles/s41562-018-0399-z.
