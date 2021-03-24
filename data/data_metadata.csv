@@ -7,4 +7,4 @@ derived/public/long_prof.txt,long_prof.txt,textfile,long_points.txt,readme.md
 derived/public/cross_prof.txt,cross_prof.txt,textfile,John Day Watershed LiDAR,readme.md
 derived/public/banks_centerline.gpkg,banks_centerline.gpkg,geopackage,Digitized Bank Edges,readme.md
 derived/public/valley_centerline.gpkg,valley_centerline.gpkg,geopackage,Digitized Valley Edges,readme.md
-derived/public/valley_centerline.gpkg,long_points.txt,textfile,John Day Watershed LiDAR,
+derived/public/valley_centerline.gpkg,long_points.txt,textfile,John Day Watershed LiDAR,readme.md
