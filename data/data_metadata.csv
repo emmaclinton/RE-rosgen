@@ -1,9 +1,10 @@
 path,name,format,sources,metadata files
-raw/public/CHaMP_Data_MFJD.shp,CHaMP Data,shapefile,,readme.md; MFJD_Variables.csv
-raw/private/JohnDayWShed.tif,John Day Watershed LiDAR,geotiff,,readme.md; Camp_Creek_Lidar_Report_2008.pdf; 2008_OLC_Camp_Creek_Acceptance_Report.pdf
-raw/private/JohnDayWShed_OrthoPrj.tif,John Day Watershed Orthophoto,geotiff,,readme.md
-derived/public/cross_points.txt,cross_points.txt,textfile,,readme.md
-derived/public/long_prof.txt,long_prof.txt,textfile,,readme.md
-derived/public/cross_prof.txt,cross_prof.txt,textfile,,readme.md
-derived/public/banks_centerline.gpkg,banks_centerline.gpkg,geopackage,,readme.md
-derived/public/valley_centerline.gpkg,valley_centerline.gpkg,geopackage,,readme.md
+raw/public/CHaMP_Data_MFJD.shp,CHaMP Data,shapefile,https://www.champmonitoring.org/,readme.md; MFJD_Variables.csv
+raw/private/JohnDayWShed.tif,John Day Watershed LiDAR,geotiff,Provided by Joe Holler,readme.md; Camp_Creek_Lidar_Report_2008.pdf; 2008_OLC_Camp_Creek_Acceptance_Report.pdf
+raw/private/JohnDayWShed_OrthoPrj.tif,John Day Watershed Orthophoto,geotiff,Provided by Joe Holler,readme.md
+derived/public/cross_points.txt,crosspts.txt,textfile,cross_prof.txt,readme.md
+derived/public/long_prof.txt,long_prof.txt,textfile,long_points.txt,readme.md
+derived/public/cross_prof.txt,cross_prof.txt,textfile,John Day Watershed LiDAR,readme.md
+derived/public/banks_centerline.gpkg,banks_centerline.gpkg,geopackage,Digitized Bank Edges,readme.md
+derived/public/valley_centerline.gpkg,valley_centerline.gpkg,geopackage,Digitized Valley Edges,readme.md
+derived/public/valley_centerline.gpkg,long_points.txt,textfile,John Day Watershed LiDAR,

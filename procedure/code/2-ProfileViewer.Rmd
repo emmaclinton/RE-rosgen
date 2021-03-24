@@ -73,7 +73,7 @@ ggplot(LongProf) +
        geom_line(size = 2) + # The "size" argument allows us to increase or decrease our point size.
        scale_color_gradient(low = "gray", high = "red") +
        theme_light() +
-       labs(x = "Distance along the transect (m)", y = "Elevation (masl)", title = "Longitudinal Profile of Extracted Reach")
+       labs(x = "Distance along the transect (m)", y = "Elevation (masl)", title = "Longitudinal Profile with Slope of Extracted Reach")
 ```
 
 ```{r}
