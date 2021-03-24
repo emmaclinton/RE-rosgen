@@ -52,7 +52,7 @@ This replication study is an attempt to use Open Source GIS to replicate the met
 
 The instructions for the work in GRASS can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf). Finding the centerlines of the river reach and corresponding valley was completed in GRASS. The first step in this process was to define the "reach" area for the point assigned for study and preprocess/create our layers to use in our digitization process. To do this, we used [this model](/procedure/code/visualize.gxm), created by Joe Holler.
 
-![Shaded DEM](/results/maps/river_reach_DEM.png)![Slope](/results/maps/river_reach_slope.png)
+![Shaded DEM](/results/maps/river_reach_DEM.png)![Slope](https://github.com/emmaclinton/RE-rosgen/blob/main/results/maps/river_reach_slope.png)
 
 An image of the shaded DEM and slope produced by the above model, shown with the data point and buffer.
 
