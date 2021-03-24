@@ -3,7 +3,7 @@ raw/public/CHaMP_Data_MFJD.shp,CHaMP Data,shapefile,,readme.md; MFJD_Variables.c
 raw/private/JohnDayWShed.tif,John Day Watershed LiDAR,geotiff,,readme.md; Camp_Creek_Lidar_Report_2008.pdf; 2008_OLC_Camp_Creek_Acceptance_Report.pdf
 raw/private/JohnDayWShed_OrthoPrj.tif,John Day Watershed Orthophoto,geotiff,,readme.md
 derived/public/cross_points.txt,cross_points.txt,textfile,,readme.md
-derived/public/long_prof.txt,long_prof.txt,textfile,,
-derived/public/cross_prof.txt,cross_prof.txt,textfile,,
-derived/public/banks_centerline.gpkg,banks_centerline.gpkg,geopackage,,
-derived/public/valley_centerline.gpkg,valley_centerline.gpkg,geopackage,,
+derived/public/long_prof.txt,long_prof.txt,textfile,,readme.md
+derived/public/cross_prof.txt,cross_prof.txt,textfile,,readme.md
+derived/public/banks_centerline.gpkg,banks_centerline.gpkg,geopackage,,readme.md
+derived/public/valley_centerline.gpkg,valley_centerline.gpkg,geopackage,,readme.md
