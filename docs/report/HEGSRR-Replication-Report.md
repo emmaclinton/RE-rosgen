@@ -118,7 +118,7 @@ Table 1. Site Measurements (CHaMP_Data_MFJD Site ID from Site_x attribute: CBW05
 | Bankfull Width | 15.1702 m | BFWdth_AVG from CHaMP_Data_MFJD |
 | Bankfull Average Depth | 0.4629 m | DpthBf_Avg from CHaMP_Data_MFJD |
 | Bankfull Maximum Depth | 1.0406 m | DpthBF_Max from CHaMP_Data_MFJD |
-| Valley Width | 70 m | R output from cross-sectional valley profile |
+| Valley Width | 73.85 m | R output from cross-sectional valley profile |
 | Valley Depth | 2.1 m | R output from cross-sectional valley profile |
 | Stream/River Length | 301.5354 m | GRASS layer banksLine |
 | Valley Length | 296.413737 m | GRASS layer valleyLine |
