@@ -46,18 +46,18 @@ Describe all elements of the analytical plan of the original study that are rele
 
 ### Sampling Plan and Data Description
 
-Include a reference map of the stream reach point you will analyze (we used a random point from someone else's dataset [Kasprak]).
+![Randomly Assigned Sample Point](/results/maps/JD_map.png)
 
 ### Variables
 
 Level I Variables:
-**Entrenchment:** Measured as the width at 2x the bankfull depth divided by the bankfull width
-**Width/Depth Ratio:** Bankfull channel width divided by bankfull mean depth
-**Sinuosity:** Ratio of stream length to valley length
+1. **Entrenchment:** Measured as the width at 2x the bankfull depth divided by the bankfull width
+2. **Width/Depth Ratio:** Bankfull channel width divided by bankfull mean depth
+3. **Sinuosity:** Ratio of stream length to valley length
 
 Level II Variables:
-**Slope Range:** Difference in water surface elevation per unit stream length
-**Channel Material:** The size and composition of channel materials in the stream (in our case, based on the fact that 50% of the substrate is of the same size class or finer than the class assigned)
+1. **Slope Range:** Difference in water surface elevation per unit stream length
+2. **Channel Material:** The size and composition of channel materials in the stream (in our case, based on the fact that 50% of the substrate is of the same size class or finer than the class assigned)
 
 ## Materials and Procedure
 
