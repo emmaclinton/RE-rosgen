@@ -50,29 +50,20 @@ Include a reference map of the stream reach point you will analyze (we used a ra
 
 ### Variables
 
-Describe the variables used in the original study to address the research questions and hypotheses that are the focus of the replication.
+Level I Variables:
+**Entrenchment:** Measured as the width at 2x the bankfull depth divided by the bankfull width
+**Width/Depth Ratio:** Bankfull channel width divided by bankfull mean depth
+**Sinuosity:** Ratio of stream length to valley length
 
-1. Identify any experimentally manipulated variables and include details about how these variables were manipulated during the original study.
-2. Identify any measured variables examined in the original study
-   -	Identify both the response(s) and predictor variable(s) associated with each hypothesis
-   -	Describe any variable transformations (e.g., log-scaled, categorical)
-   -	Describe any spatial aggregation/disaggregation that was applied to any variables
-3. Describe any adjustments made to the variables to account for
-   -	first-order spatial effects (sub-regional differences in means)
-   -	second-order spatial effects (spatial dependencies)
-   -	spatial anisotropies (directional trends)
+Level II Variables:
+**Slope Range:** Difference in water surface elevation per unit stream length
+**Channel Material:** The size and composition of channel materials in the stream (in our case, based on the fact that 50% of the substrate is of the same size class or finer than the class assigned)
 
-
-## Materials and Procedure (just say if you did anything different; linking to our resources [handouts and models]; if something is documented, refer to that documentation)
+## Materials and Procedure
 
 In this replication study, the open source software platforms GRASS and R are used to replicate the Rosgen river classification for a specific reach of the John Day River up to Level II. Note that in order to complete this analysis using MacOS, the software platforms [The Unarchiver](https://theunarchiver.com/) and [XCode](https://idmsa.apple.com/IDMSWebAuth/signin?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Fdownload%2Fmore%2F&rv=1) are required.
 
-Describe how the replication study will be implemented and identify any materials and procedures used to complete the replication.
-1.	For computational studies include information about the hardware and software environments of both the original study and the replication attempt.
-
-Protocol: Explain how the analysis of the replication will proceed and identify if the analysis plan will match the original study. For many replications this section may be quite short if the procedures used in the original analyses are followed closely. In those cases, this section can simply explain how key elements will be followed.
-
-This replication study is an attempt to use Open Source GIS to replicate the methods of (Rosgen, 1994) and compare our results to those of the Rosgen (1994) replication by Kasprak et al. (2016). In this procedure, each member of the team was assigned a random study site that was used in the original experimental setup. Study sites came from the [CHaMP](/data/raw/public/CHaMP_Data_MFJD.shp) datafile. This instance looks at the site with the loc_id of 7 (CBW05583-275954).
+This replication study is an attempt to use Open Source GIS to replicate the methods of (Rosgen, 1994) and compare our results to those of the Rosgen (1994) replication by Kasprak et al. (2016). Kasprak et al. (2016) used different DEM data and software platforms ([River Bathymetry Tool](https://essa.com/explore-essa/tools/river-bathymetry-toolkit-rbt/)) than we used in our analysis. The scope of the analysis was also different in the original study, which looked at reaches on the watershed scale. Instead, we focused only on a single, randomly assigned reach. In this procedure, each member of the team was assigned a random study site that was used in the original experimental setup. Study sites came from the [CHaMP](/data/raw/public/CHaMP_Data_MFJD.shp) datafile. This instance looks at the site with the loc_id of 7 (CBW05583-275954).
 
 The instructions for the work in GRASS can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf). Finding the centerlines of the river reach and corresponding valley was completed in GRASS. The first step in this process was to define the "reach" area for the point assigned for study and preprocess/create our layers to use in our digitization process. To do this, we used [this model](/procedure/code/visualize.gxm), created by Joe Holler.
 
