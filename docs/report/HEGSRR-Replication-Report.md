@@ -67,11 +67,17 @@ This replication study is an attempt to use Open Source GIS to replicate the met
 
 The instructions for the work in GRASS can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf). Finding the centerlines of the river reach and corresponding valley was completed in GRASS. The first step in this process was to define the "reach" area for the point assigned for study and preprocess/create our layers to use in our digitization process. To do this, we used [this model](/procedure/code/visualize.gxm), created by Joe Holler.
 
+![Shaded DEM](/results/shadedDEM.png)
+An image of the shaded DEM created by the output of the visualize model.
+
 We then digitized the banks three separate times, each time in a new vector map, and did the same for the valley edges. In each new layer, the banks or valley edges of the river were digitized as new vector lines at 1:1500 scale. Two of the digitizations for both the banks and the valley layers were done using the slope layer, and the third used a hillshaded DEM as reference.
+
+![River Centerline](/results/river_center.png)
+![Valley Centerline](/results/valley_lines.png)
 
 In order to find the centerlines (and centerline lengths) of the river and the valley, we used [this model](/procedure/code/center_line_length.gxm), also created by Joe Holler.
 
-We then extracted the longitudinal profile of our river reach, extracted them as longitudinal points in a textfile, and extracted the elevation data corresponding to the elevation point coordinates. We then extracted the cross-sectional profile of a transect very near to the CHaMP point we had been assigned, and transformed that transect into a series of points, which we extracted, along with elevation data of the points, as a textfile. (Again, instructions can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf)).
+We then extracted the longitudinal profile of our river reach, extracted them as longitudinal points in a textfile, and extracted the elevation data corresponding to the elevation point coordinates. We also extracted the cross-sectional profile of a transect very near to the CHaMP point we had been assigned, and transformed that transect into a series of points, which we extracted, along with elevation data of the points, as a textfile. (Again, instructions can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf)).
 
 Once we had the outputs for the centerlines of the rivers and valleys, we took the textfile data regarding the cross-sectional profile points and the longitudinal profile points into R. [This script](/procedure/code/2-ProfileViewer.Rmd), created by Zach Hilgendorf, was used to extract a longitudinal profile and cross-sectional profile of the river reach using the data from the textfiles exported from GRASS. The script also calculates and plots the slope of the reach. However, the slope was calculated as an average of slopes between consecutive points along the transect, and due to digitizing errors (e.g. marking the slope as higher up the bank than it should have been) led to some of the slopes being far steeper than others. Therefore, the slope between the first point and the last point in the reach was manually calculated  and compared to the average slope value.
 
@@ -94,13 +100,6 @@ Assessment Criteria: Identify the criteria that will define whether the replicat
 
 ## Replication Results (majority of discussion is about how accurate/certain they were compared to Kasprak)
 
-For each hypothesis examined, present separately the results of the replication attempt.
-1.	Briefly describe how the replication protocol outlined above was implemented reporting key information (e.g., sample size).
-2.	State whether the original hypothesis was or was not supported by the replication
-   - Provide key statistics produced by the replication.
-   - Provide key measures (e.g., matching effect direction/size, significance) used to make the decision.
-   - Highlight any contradictory results with a brief explanation
-3.	State whether any hypothesis linked to a planned deviation from the original study was supported. Provide key statistics and related reasoning.
 
 Figures to Include:
 - map of the study site shaded elevation
@@ -152,7 +151,7 @@ Provide a summary and interpretation of the key findings of the replication *vis
 - Practical Causes – related to lack of data, code, details in the original analysis
 - Informative Causes – related to absence of effect, change in population, or location.
 
-Our results differed from those of Kasprak et al. (2016). The original study found that this river reach (CBW05583-275954) was of the type B3c, while our analysis led to the conclusion that this reach is type C3 (Table 3). Although the Level I classification is not the same, the entrenchment ratio value seems to be the main factor that results in our classification being different from that of the original study (Table 2). There are several factors that may be causing this discrepancy. It is important to consider the fact that we are certainly introducing uncertainty in this digitization process, no matter how carefully we attempted to pick out the banks and valley edges in this data. One factor that caused some inconsistencies in slope and potentially in the centerline calculations was that all digitization was done at 1:1500 scale. At that resolution, it was difficult to very accurately pick out and trace the banks of the river. Perhaps if there were a way to automate this digitization to ensure that it was based on clear, data-driven elevational differences and not approximately visually determined, this would account for some of this uncertainty.
+Our results differed from those of Kasprak et al. (2016). The original study found that this river reach (CBW05583-275954) was of the type B3c, while our analysis led to the conclusion that this reach is type C3 (Table 3). Although the Level I classification is not the same (Table 2), the entrenchment ratio value seems to be the main factor that results in our classification being different from that of the original study (Table 2). There are several factors that may be causing this discrepancy. It is important to consider the fact that we are certainly introducing uncertainty in this digitization process, no matter how carefully we attempted to pick out the banks and valley edges in this data. One factor that caused some inconsistencies in slope and potentially in the centerline calculations was that all digitization was done at 1:1500 scale. At that resolution, it was difficult to very accurately pick out and trace the banks of the river. Perhaps if there were a way to automate this digitization to ensure that it was based on clear, data-driven elevational differences and not approximately visually determined, this would account for some of this uncertainty.
 
 Another potential driver of the difference in our results was the fact that we used different materials and methods than those in the original study. Like Kasprak et al. (2016), we used GIS to test the RCS. However, we used original models and code in the platforms GRASS and R, while they used the [River Bathymetry Toolkit](https://essa.com/explore-essa/tools/river-bathymetry-toolkit-rbt/) to determine the values of river classification criteria. In addition, our data differed from that used in Kasprak et al. (2016). Although both studies used CHaMP  used the [Camp Creek LiDAR DEM data](/data/metadata/Camp_Creek_Lidar_Report_2008.pdf), which had a resolution of 1m x 1m. Conversely, Kasprak et al. (2016) used DEM data with 0.1m grid resolution. This difference in resolution is another potential source of uncertainty in our digitization process and in our slope calculations. We also did not have access to high-resolution topographic data nor to on-the-ground photographs of the site to check the accuracy or validity of our assessment, and did not "check" our results in that way. We also used different methods to pick out our bankfull water surface, relying on the CHaMP data for average bankfull width rather than using the [CHaMP Topo Toolbar](https://sites.google.com/a/northarrowresearch.com/champtools/) to derive a bankfull water surface as Kasprak et al. (2016) did.
 
