@@ -1,7 +1,7 @@
 path,name,format,sources,metadata files
 raw/public/CHaMP_Data_MFJD.shp,CHaMP Data,shapefile,https://www.champmonitoring.org/,readme.md; MFJD_Variables.csv
-raw/private/JohnDayWShed.tif,John Day Watershed LiDAR,geotiff,Provided by Joe Holler,readme.md; Camp_Creek_Lidar_Report_2008.pdf; 2008_OLC_Camp_Creek_Acceptance_Report.pdf
-raw/private/JohnDayWShed_OrthoPrj.tif,John Day Watershed Orthophoto,geotiff,Provided by Joe Holler,readme.md
+raw/private/JohnDayWShed.tif,John Day Watershed LiDAR,geotiff,Provided by Joe Holler; https://catalog.data.gov/dataset/2008-oregon-department-of-geology-and-mineral-industries-dogami-lidar-camp-creek-75d4f,readme.md; Camp_Creek_Lidar_Report_2008.pdf; 2008_OLC_Camp_Creek_Acceptance_Report.pdf
+raw/private/JohnDayWShed_OrthoPrj.tif,John Day Watershed Orthophoto,geotiff,Provided by Joe Holler; https://catalog.data.gov/dataset/2008-oregon-department-of-geology-and-mineral-industries-dogami-lidar-camp-creek-75d4f,readme.md
 derived/public/cross_points.txt,crosspts.txt,textfile,cross_prof.txt,readme.md
 derived/public/long_prof.txt,long_prof.txt,textfile,long_points.txt,readme.md
 derived/public/cross_prof.txt,cross_prof.txt,textfile,John Day Watershed LiDAR,readme.md
