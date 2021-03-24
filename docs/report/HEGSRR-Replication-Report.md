@@ -21,9 +21,7 @@ Revised: `DD Month YYYY`
 
 ## Abstract
 
-There is much appeal in developing and utilizing a standard and quantifiable method of stream classification. Standardizing the way streams are classified allows communication across disciplines regarding river systems and their predicted behaviors, their past behaviors, and the best ways in which to manage or restore them.
-
-The Rosgen Classification System (RCS), probably the most common method for stream classification in North America, is a method of stream taxonomy that involves classifying streams based on physical metrics that are informed by empirical field data (Kasprak et al., 2016). The RCS involves classifying streams based on directly measurable variables, ranging from very broad to very reach-specific characteristics (Rosgen, 1994).
+There is much appeal in developing and utilizing a standard and quantifiable method of stream classification. Standardizing the way streams are classified allows communication across disciplines regarding river systems and their predicted behaviors, their past behaviors, and the best ways in which to manage or restore them. The Rosgen Classification System (RCS), probably the most common method for stream classification in North America, is one such method of stream taxonomy that involves classifying streams based on physical metrics that are informed by empirical field data (Kasprak et al., 2016). The RCS involves classifying streams based on directly measurable variables, ranging from very broad to very reach-specific characteristics (Rosgen, 1994). Kasprak et al. (2016) attempted to replicate the RCS, normally based on empirical field-based data, using geographic data and on a watershed scale.
 
 Our replication study focuses on the first two levels of stream classifications: Level I and Level II. Level I is the "broad geomorphic characterization", while Level II is the morphological description of a reach (Rosgen, 1994). Level I is based on longitudinal profile characteristics, cross-section morphology, and plan view morphology (stream pattern). Level II incorporates entrenchment (width of flood-prone area to bankfull surface width of channel), width/depth ratio (bankfull channel width / mean bankfull depth), sinuosity (ratio of stream length to valley length) and channel materials (Rosgen, 1994).
 
@@ -64,23 +62,6 @@ Describe the variables used in the original study to address the research questi
    -	second-order spatial effects (spatial dependencies)
    -	spatial anisotropies (directional trends)
 
-### Analytical Specification
-
-Describe the exact analytical specification that was used to test each hypothesis
-1. For computational studies include information about the hardware and software environments of both the original study
-2. Identify the coordinate system(s) and projection(s) used during the original analysis
-3. Specify if/how edge effects were addressed. Provide details regarding the extent of any buffer or guard areas used.
-4. Describe the type of model, the specification of that model, distributional assumptions of the model, and any post-hoc analyses used to test each hypothesis. Key aspects of some common geographical analyses include:
-   - If a spatial weighting scheme was used, provide a functional description of that scheme
-   - If a spatial model was used, provide detailed description of that model
-   - If a classifier was used, provide details about the selection of training data, validation data, and if any independent test data
-   - If a spatial multi-level model was used, identify the spatial scale of each level, the variable included at each level, and the levels any spatial structures or cross-scale structure are estimated at.
-Inference Criteria, Results, and Robustness: For each separate hypothesis, provide a description of the results of the original study and the relevant inference criteria and robustness checks
-1. Describe the specific criteria (e.g., p-values, effect size, model fit) and thresholds that were used to make inferences.
-   -	Identify any adjustments made for multiple testing (e.g., Bonferroni, Sidak) and how they were implemented.
-2. Describe the result associated with each hypothesis.
-   -	Identify the size and direction of the effect, measure of variance of the effect, statistical assessments
-3. Describe any robustness checks that were completed to assess the strength and reliability of inferences for each hypothesis. Identify any spatial components varied during robustness checks.
 
 ## Materials and Procedure (just say if you did anything different; linking to our resources [handouts and models]; if something is documented, refer to that documentation)
 
@@ -143,8 +124,9 @@ Tables to Include:
 Table 1. Site Measurements (CHaMP_Data_MFJD Site ID from Site_x attribute: CBW05583-275954)
 | Variable | Value | Source |
 | :-: | :-: | :-: |
-| Bankfull Width | 15.1702 | BFWdth_AVG from CHaMP_Data_MFJD |
-| Bankfull Average Depth | 0.4629 | DpthBf_Avg from CHaMP_Data_MFJD |
+| Bankfull Width | 15.1702 m | BFWdth_AVG from CHaMP_Data_MFJD |
+| Bankfull Average Depth | 0.4629 m | DpthBf_Avg from CHaMP_Data_MFJD |
+| Bankfull Maximum Depth | 1.0406 m | DpthBF_Max from CHaMP_Data_MFJD |
 | Valley Width | 70 m | R output from cross-sectional valley profile |
 | Valley Depth | 2.1 m | R output from cross-sectional valley profile |
 | Stream/River Length | 301.5354 m | GRASS layer banksLine |
@@ -155,7 +137,7 @@ Table 2. Rosgen Level I Classification
 | Criteria | Value |
 | :-: | :-: |
 | Entrenchment Ratio | 4.6143 |
-| Width / Depth Ratio | (bankfull mean width / bankfull mean depth) 32.7720 |
+| Width / Depth Ratio | 32.7720 |
 | Sinuosity | 1.0173 |
 | Level I Stream Type | C |
 
@@ -164,8 +146,8 @@ slightly entrenched, high w/d, low sinuosity
 Table 3. Rosgen Level II Classification
 | Criteria | Value |
 | :-: | :-: |
-| Slope | 1.714293 OR 0.0066833| (our slope calculations is a meter-by-meter average of slopes' might be a bad way to estimate slope; adds extreme slope values from digitizing errors (could try to calc from elevation at beginning and elevation at the end))
-| Channel Material | (qualitative label based on # above) Cobble |
+| Slope | 0.0066833|
+| Channel Material | Cobble |
 | Level II Stream Type | C3 |
 
 
@@ -181,9 +163,9 @@ Provide a summary and interpretation of the key findings of the replication *vis
 
 Our results differed from those of Kasprak et al. (2016). The original study found that this river reach (CBW05583-275954) was of the type B3c, while our analysis led to the conclusion that this reach is type C3 (Table 3). Although the Level I classification is not the same, the entrenchment ratio value seems to be the main factor that results in our classification being different from that of the original study (Table 2). There are several factors that may be causing this discrepancy. It is important to consider the fact that we are certainly introducing uncertainty in this digitization process, no matter how carefully we attempted to pick out the banks and valley edges in this data. One factor that caused some inconsistencies in slope and potentially in the centerline calculations was that all digitization was done at 1:1500 scale. At that resolution, it was difficult to very accurately pick out and trace the banks of the river. Perhaps if there were a way to automate this digitization to ensure that it was based on clear, data-driven elevational differences and not approximately visually determined, this would account for some of this uncertainty.
 
-Another potential driver of the difference in our results was the fact that we used different materials and methods than those in the original study. Like Kasprak et al. (2016), we used GIS to test the RCS. However, we used original models and code in the platforms GRASS and R, while they used the [River Bathymetry Toolkit](https://essa.com/explore-essa/tools/river-bathymetry-toolkit-rbt/) to determine the values of river classification criteria. In addition, our data differed from that used in Kasprak et al. (2016). Although both studies used CHaMP  used the [Camp Creek LiDAR DEM data](/data/metadata/Camp_Creek_Lidar_Report_2008.pdf), which had a resolution of 1m x 1m. Conversely, Kasprak et al. (2016) used DEM data with 0.1m grid resolution. This difference in resolution is another potential source of uncertainty in our digitization process and in our slope calculations. We also did not have access to high-resolution topographic data nor to on-the-ground photographs of the site to check the accuracy or validity of our assessment. We also used different methods to pick out our bankfull water surface, relying on the CHaMP data for average bankfull width rather than using the [CHaMP Topo Toolbar](https://sites.google.com/a/northarrowresearch.com/champtools/) to derive a bankfull water surface as Kasprak et al. (2016) did.
+Another potential driver of the difference in our results was the fact that we used different materials and methods than those in the original study. Like Kasprak et al. (2016), we used GIS to test the RCS. However, we used original models and code in the platforms GRASS and R, while they used the [River Bathymetry Toolkit](https://essa.com/explore-essa/tools/river-bathymetry-toolkit-rbt/) to determine the values of river classification criteria. In addition, our data differed from that used in Kasprak et al. (2016). Although both studies used CHaMP  used the [Camp Creek LiDAR DEM data](/data/metadata/Camp_Creek_Lidar_Report_2008.pdf), which had a resolution of 1m x 1m. Conversely, Kasprak et al. (2016) used DEM data with 0.1m grid resolution. This difference in resolution is another potential source of uncertainty in our digitization process and in our slope calculations. We also did not have access to high-resolution topographic data nor to on-the-ground photographs of the site to check the accuracy or validity of our assessment, and did not "check" our results in that way. We also used different methods to pick out our bankfull water surface, relying on the CHaMP data for average bankfull width rather than using the [CHaMP Topo Toolbar](https://sites.google.com/a/northarrowresearch.com/champtools/) to derive a bankfull water surface as Kasprak et al. (2016) did.
 
-Aside from the entrenchment ratio, the sinuosity value is slightly lower than those of both B and C RCS stream types (typically >1.2, whereas our value was 1.0173 [Table 3]). The calculated sinuosity only aligns with that of an RCS Class A stream. This may be due to the approximated centerlines extrapolated from the digitized banks and valley edges losing some of the variability reflected in the banks. Additionally, although there is little temporal separation between our study and Kasprak et al. (2016), it is interesting to give some consideration here the impact of time on changes in fluvial form and behavior.
+Aside from the entrenchment ratio, the sinuosity value is slightly lower than those of both B and C RCS stream types (typically >1.2, whereas our value was 1.0173 [Table 3]). The calculated sinuosity only aligns with that of an RCS Class A stream. This may be due to the approximated centerlines extrapolated from the digitized banks and valley edges losing some of the variability reflected in the banks. Additionally, although there is little temporal separation between our study and Kasprak et al. (2016), it is interesting to give some consideration here the impact of time on changes in fluvial form and behavior. In addition, our replication, which was on a reach scale, was focused on a far smaller extent than Kasprak et al. (2016), which was on a watershed scale.
 
 The width/depth ratio for this side, as well as the slope (as calculated between the highest and lowest points of the reach) and substrate material are very similar for the B3c and and C3 stream types. Our data regarding the width/depth and channel substrate come from the CHaMP data. However, our slope value came from the longitudinal profile created in GRASS and fits well within the confines of the stream classification given by Kasprak et al. (2016). This indicates that there was some similarity between our analysis and that of the original study.
 
@@ -195,8 +177,7 @@ Discuss a response to the following prompt: Quantifying uncertainty in geomorphi
 
 ## Conclusions
 
-Restate the key findings and discuss their broader societal implications or contributions to theory.
-Do the research findings suggest a need for any future research?
+In this case, the results of our analysis did not align with those of Kasprak et al. (2016). If this were a reproduction study, we would have had access to the same data and software platforms as those used in the original study. However, this was replication attempt and our data and methods differed from those used by the original study. Still, it is assumed that the RCS should produce the same or very similar results in stream classification due to the quantifiable nature of the variables upon which the classification is based. There are many factors to which we may attribute the discrepancy between our results and those of Kasprak et al. (2016), as mentioned above. There were several instances in which we introduced uncertainty into our analysis (e.g. digitization process, lower resolution data).
 
 ## References
 
