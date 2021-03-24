@@ -21,30 +21,15 @@ Revised: `DD Month YYYY`
 
 ## Abstract
 
-There is much appeal in developing and utilizing a standard and quantifiable method of stream classification. Standardizing the way streams are classified allows communication across disciplines regarding river systems and their predicted behaviors, their past behaviors, and the best ways in which to manage or restore them. The Rosgen Classification System (RCS), probably the most common method for stream classification in North America, is one such method of stream taxonomy that involves classifying streams based on physical metrics that are informed by empirical field data (Kasprak et al., 2016). The RCS involves classifying streams based on directly measurable variables, ranging from very broad to very reach-specific characteristics (Rosgen, 1994). Kasprak et al. (2016) attempted to replicate the RCS, normally based on empirical field-based data, using geographic data and on a watershed scale.
+There is much appeal in developing and utilizing a standard and quantifiable method of stream classification. Standardizing the way streams are classified allows communication across disciplines regarding river systems and their predicted behaviors, their past behaviors, and the best ways in which to manage or restore them. The Rosgen Classification System (RCS), probably the most common method for stream classification in North America, is one such method of stream taxonomy. The RCS classifies streams based on physical metrics that are informed by empirical field data (Kasprak et al., 2016). The RCS involves classifying streams based on directly measurable variables, ranging from very broad to very reach-specific characteristics (Rosgen, 1994). Kasprak et al. (2016) attempted to replicate the RCS classification system, which is normally based on empirical field-based data, using geographic data and on a watershed scale.
 
 Our replication study focuses on the first two levels of stream classifications: Level I and Level II. Level I is the "broad geomorphic characterization", while Level II is the morphological description of a reach (Rosgen, 1994). Level I is based on longitudinal profile characteristics, cross-section morphology, and plan view morphology (stream pattern). Level II incorporates entrenchment (width of flood-prone area to bankfull surface width of channel), width/depth ratio (bankfull channel width / mean bankfull depth), sinuosity (ratio of stream length to valley length) and channel materials (Rosgen, 1994).
 
 Kasprak et al. (2016) utilized the RCS to classify 33 reach stream types in the John Day River (located in Oregon in the Columbia River Valley). In this study, they used DEM data and expert-generated ground-based assessment data in a GIS to assign a Level I and Level II classification to different reaches in the John Day River.
 
-Our study attempts to replicate the results of Kasprak et al. (2016) using open source GIS and statistical software (GRASS and R, respectively). We use original CHaMP data from the Kasprak study in conjuction with DEM LiDAR data from **(XXXXXXX)** to extrapolate Level I and Level II classifications for a randomly assigned reach in the John Day River.
+Our study attempts to replicate the results of Kasprak et al. (2016) using open source GIS and statistical software (GRASS and R, respectively). We use original CHaMP data used in the Kasprak study in conjuction with DEM LiDAR data from **(XXXXXXX)** to extrapolate Level I and Level II classifications for a randomly assigned reach in the John Day River. Our study attempts a reach-level classification and uses DEM data with a lower spatial resolution than that used in the original study. We also use the open source platforms GRASS and R, which were not the platforms used in the original study.
 
-
-Briefly describe the original analysis – type of study, research design, analytical approach, and results; motivation of the replication; and outline of the replication study; purpose it serves to society (could just be a paragraph)
-
-## Original Study Information (BRIEF outline of what the other papers did)
-
-Description: Present a short narrative that summarizes key information about the original study. Include information about all of the following
-1.	Provide a written description of the study location and extent. Whenever possible, provide specific geographic coordinates bounding the study extent or a spatial reference file.
-2.	Identify and describe the spatial support (spatial resolution, unit of analysis) of the original analysis was conducted
-3.	What type of sample/data did the original study use?
-4.	Are the data and code used in the original analysis available/used in this replication?
-
-## Analytical Plan
-
-Describe all elements of the analytical plan of the original study that are relevant to the research questions and hypotheses being re-examined by the replication. Include information for each of the following sub-sections as appropriate.
-
-### Sampling Plan and Data Description
+### Sample
 
 ![Randomly Assigned Sample Point](/results/maps/JD_map.png)
 
