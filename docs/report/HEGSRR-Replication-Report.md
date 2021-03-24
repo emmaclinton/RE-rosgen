@@ -54,7 +54,6 @@ This replication study is an attempt to use Open Source GIS to replicate the met
 The instructions for the work in GRASS can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf). Finding the centerlines of the river reach and corresponding valley was completed in GRASS. The first step in this process was to define the "reach" area for the point assigned for study and preprocess/create our layers to use in our digitization process. To do this, we used [this model](/procedure/code/visualize.gxm), created by Joe Holler.
 
 ![Shaded DEM](/results/maps/river_reach_DEM.png)![Slope](/results/maps/river_reach_slope.png)
-
 An image of the shaded DEM and slope produced by the above model, shown with the data point and buffer.
 
 We then digitized the banks three separate times, each time in a new vector map, and did the same for the valley edges. In each new layer, the banks or valley edges of the river were digitized as new vector lines at 1:1500 scale. Two of the digitizations for both the banks and the valley layers were done using the slope layer, and the third used a hillshaded DEM as reference.
@@ -64,9 +63,9 @@ We then digitized the banks three separate times, each time in a new vector map,
 
 In order to find the centerlines (and centerline lengths) of the river and the valley, we used [this model](/procedure/code/center_line_length.gxm), also created by Joe Holler.
 
-We then extracted the longitudinal profile of our river reach, extracted them as longitudinal points in a textfile, and extracted the elevation data corresponding to the elevation point coordinates. We also extracted the cross-sectional profile of a transect very near to the CHaMP point we had been assigned, and transformed that transect into a series of points, which we extracted, along with elevation data of the points, as a textfile. (Again, instructions can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf)).
+We then created the longitudinal profile of our river reach and extracted it as a series of longitudinal points along with the elevation data corresponding to the elevation point coordinates in a textfile. We also created the cross-sectional profile of a transect very near to the CHaMP point we had been assigned, and transformed that transect into a series of points, which we extracted, along with elevation data of the points, as a textfile. (Again, instructions can be found [here](/procedure/protocols/1-Research_Protocol_GRASS.pdf)).
 
-Once we had the outputs for the centerlines of the rivers and valleys, we took the textfile data regarding the cross-sectional profile points and the longitudinal profile points into R. [This script](/procedure/code/2-ProfileViewer.Rmd), created by Zach Hilgendorf, was used to extract a longitudinal profile and cross-sectional profile of the river reach using the data from the textfiles exported from GRASS. The script also calculates and plots the slope of the reach. However, the slope was calculated as an average of slopes between consecutive points along the transect, and due to digitizing errors (e.g. marking the slope as higher up the bank than it should have been) led to some of the slopes being far steeper than others. Therefore, the slope between the first point and the last point in the reach was manually calculated  and compared to the average slope value.
+Once we had the outputs for the centerlines of the rivers and valleys, we took the textfile data regarding the cross-sectional profile points and the longitudinal profile points into R. [This script](/procedure/code/2-ProfileViewer.Rmd), created by Zach Hilgendorf, was used to extract a longitudinal profile and cross-sectional profile of the river reach using the data from the textfiles exported from GRASS. The script also calculates and plots the slope of the reach. However, the slope was calculated as an average of slopes between consecutive points along the transect, and due to digitizing errors (e.g. marking the slope as higher up the bank than it should have been) led to some of the slopes being far steeper than others. Therefore, the slope between the first point and the last point in the reach was manually calculated and determined to be more accurate than the average slope value.
 
 Finally, the R script plotted the cross-sectional profile with flood prone area demarkated by a black line (flood-prone area here defined as twice the bankfull depth).
 
@@ -126,6 +125,9 @@ Table 3. Rosgen Level II Classification
 | Slope | 0.0066833|
 | Channel Material | Cobble |
 | Level II Stream Type | C3 |
+
+![Longitudinal Profile](/results/figures/long_prof.png)
+![Cross-sectional profile](/results/figures/x_section.png)
 
 
 ## Unplanned Deviations from the Protocol
