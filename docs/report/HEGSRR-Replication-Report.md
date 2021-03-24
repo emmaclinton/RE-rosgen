@@ -126,8 +126,8 @@ Table 3. Rosgen Level II Classification
 | Channel Material | Cobble |
 | Level II Stream Type | C3 |
 
-![Longitudinal Profile](/results/figures/long_prof.png)
-![Cross-sectional profile](/results/figures/x_section.png)
+![Longitudinal Profile](rosgen/results/figures/long_prof.png)
+![Cross-sectional profile](rosgen/results/figures/x_section.png)
 
 
 ## Unplanned Deviations from the Protocol
