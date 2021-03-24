@@ -69,6 +69,8 @@ The instructions for the work in GRASS can be found [here](/procedure/protocols/
 
 ![Shaded DEM](/results/maps/shadedDEM.png)
 
+An image of the shaded DEM produced by the above model, shown with the data point and buffer. 
+
 We then digitized the banks three separate times, each time in a new vector map, and did the same for the valley edges. In each new layer, the banks or valley edges of the river were digitized as new vector lines at 1:1500 scale. Two of the digitizations for both the banks and the valley layers were done using the slope layer, and the third used a hillshaded DEM as reference.
 
 ![River Centerline](/results/maps/river_center.png)
